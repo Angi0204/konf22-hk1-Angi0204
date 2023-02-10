@@ -72,7 +72,10 @@ public class CoffeeMachine {
      * @return message
      */
     public String brew(String coffee) {
-        if (!checkMinimumLevel()) {
+        checkMinimumLevel();
+        int waterlevel = this.currentWaterLevel;
+        int beanslevel = this.currentCoffeeBeansLevel;
+        if (waterlevel<=99 || beanslevel<= 49 ) {
             return "Please fill coffeemachine";
         }
 
