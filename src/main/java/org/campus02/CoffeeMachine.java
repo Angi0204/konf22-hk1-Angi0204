@@ -7,9 +7,9 @@ public class CoffeeMachine {
     private int currentWaterLevel;
     private int currentCoffeeBeansLevel;
 
-    public CoffeeMachine(int maxWaterLevel, int maxCoffeeBeansLevel) {
+    public CoffeeMachine(int maxWaterLevel, int maxCoffeeBeansLevel, int currentCoffeeBeansLevel, int currentWaterLevel) {
         this.maxWaterLevel = maxWaterLevel;
-        this.maxCoffeeBeansLevel = 0;
+        this.maxCoffeeBeansLevel = maxCoffeeBeansLevel;
         this.currentWaterLevel = 0;
         this.currentCoffeeBeansLevel = 0;
     }
@@ -47,9 +47,8 @@ public class CoffeeMachine {
      *
      */
     public void fill() {
-        // TODO fill machine
-        // currentWaterLevel to maxWaterLevel
-        // currentCoffeeBeansLevel to maxCoffeeBeansLevel
+        this.currentWaterLevel= getMaxWaterLevel();
+        this.currentCoffeeBeansLevel= getCurrentCoffeeBeansLevel();
     }
 
     /**
