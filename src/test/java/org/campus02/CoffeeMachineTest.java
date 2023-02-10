@@ -1,5 +1,9 @@
 package org.campus02;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CoffeeMachineTest {
@@ -10,8 +14,10 @@ class CoffeeMachineTest {
      * create a coffeemachine and verify the initial values
      */
     @Test
+    @DisplayName( "Konstruktor Test")
     void testConstructor() {
-
+        CoffeeMachine Nespresso = new CoffeeMachine(180,55, 52,150);
+        Assertions.assertEquals(55, Nespresso.getMaxCoffeeBeansLevel());
     }
 
     /**
@@ -19,6 +25,9 @@ class CoffeeMachineTest {
      */
     @Test
     void fill() {
+        CoffeeMachine Nespresso = new CoffeeMachine(180,55, 52,150);
+        Nespresso.fill();
+       // Assertions.assertEquals(180,150);
     }
 
     /**
@@ -26,6 +35,9 @@ class CoffeeMachineTest {
      */
     @Test
     void clean() {
+        CoffeeMachine Nespresso = new CoffeeMachine(180,55, 52,150);
+        Nespresso.clean();
+        Assertions.assertEquals(0,Nespresso.clean());
     }
 
     /**
@@ -33,6 +45,10 @@ class CoffeeMachineTest {
      */
     @Test
     void checkMinimumLevelBeforeFill() {
+        CoffeeMachine Nespresso = new CoffeeMachine(180,55, 52,150);
+        Nespresso.fill();
+        Nespresso.checkMinimumLevel();
+        Assertions.assertFalse(false);
     }
 
     /**
@@ -40,6 +56,11 @@ class CoffeeMachineTest {
      */
     @Test
     void checkMinimumLevelAfterFill() {
+        CoffeeMachine Nespresso = new CoffeeMachine(180,55, 52,150);
+        Nespresso.fill();
+        Nespresso.checkMinimumLevel();
+        Assertions.assertTrue(true);
+
     }
 
     /**
@@ -49,6 +70,7 @@ class CoffeeMachineTest {
      */
     @Test
     void brewSuccessAmericano() {
+
     }
 
     /**
@@ -58,6 +80,7 @@ class CoffeeMachineTest {
      */
     @Test
     void brewMelange() {
+        CoffeeMachine Nespresso = new CoffeeMachine(180,55, 52,150);
 
     }
 

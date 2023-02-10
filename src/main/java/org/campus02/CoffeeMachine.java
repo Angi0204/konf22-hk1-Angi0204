@@ -45,10 +45,12 @@ public class CoffeeMachine {
      * currentWaterLevel to maxWaterLevel
      * currentCoffeeBeansLevel to maxCoffeeBeansLevel
      *
+     * @return
      */
-    public void fill() {
-        this.currentWaterLevel= getMaxWaterLevel();
+    public int fill() {
+        this.currentWaterLevel=getMaxWaterLevel();
         this.currentCoffeeBeansLevel= getCurrentCoffeeBeansLevel();
+        return getCurrentCoffeeBeansLevel();
     }
 
     /**
