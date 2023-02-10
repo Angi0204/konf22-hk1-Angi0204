@@ -82,11 +82,11 @@ Nespresso.brew("americano");
      * Verify return message
      * (don't forget to fill the machine)
      */
-  /**  @Test
+    @Test
     void brewMelange() {
         CoffeeMachine Nespresso = new CoffeeMachine(180,55, 52,150);
         Nespresso.brew("melange");
-        Assertions.assertEquals("Coffee not offered",Nespresso.brew("melange"));
+
     }
 
     /**
