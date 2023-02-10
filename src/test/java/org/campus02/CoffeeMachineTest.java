@@ -32,12 +32,14 @@ class CoffeeMachineTest {
 
     /**
      * Verify current values
-     */
+
     @Test
     void clean() {
         CoffeeMachine Nespresso = new CoffeeMachine(180,55, 52,150);
         Nespresso.clean();
-        Assertions.assertEquals(0,Nespresso.clean());
+        int actual= 150;
+        Assertions.assertEquals(0,actual);
+
     }
 
     /**
@@ -70,6 +72,8 @@ class CoffeeMachineTest {
      */
     @Test
     void brewSuccessAmericano() {
+        CoffeeMachine Nespresso = new CoffeeMachine(180,55, 30,100);
+Nespresso.brew("americano");
 
     }
 
@@ -78,10 +82,11 @@ class CoffeeMachineTest {
      * Verify return message
      * (don't forget to fill the machine)
      */
-    @Test
+  /**  @Test
     void brewMelange() {
         CoffeeMachine Nespresso = new CoffeeMachine(180,55, 52,150);
-
+        Nespresso.brew("melange");
+        Assertions.assertEquals("Coffee not offered",Nespresso.brew("melange"));
     }
 
     /**
